@@ -1,0 +1,26 @@
+<h1>Lista de perros disponibles</h1>
+<table>
+    <tr>
+    <% @dogs.each do |dog| %>
+        <thead>
+            <th>Nombre:</th>
+            <th>Tamaño:</th>
+            <th>Edad:</th>
+            <th>Sexo:</th>
+            <th>Historia:</th>
+        </thead>
+    </tr>
+    <tr>
+        <td><%= dog.name %></td>
+        <td><%= dog.size %></td>
+        <td><%= dog.age %></td>
+        <td><%= dog.gender %></td>
+        <td><%= dog.description %></td>
+        <td>
+            <%= link_to "Mostrar" %>
+            <%= link_to "Editar" %>
+            <%= link_to "Eliminar" %>
+        </td>
+    </tr>
+    <% end %>
+</table>
