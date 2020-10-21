@@ -17,9 +17,9 @@
         <td><%= dog.gender %></td>
         <td><%= dog.description %></td>
         <td>
-            <%= link_to "Mostrar" %>
-            <%= link_to "Editar" %>
-            <%= link_to "Eliminar" %>
+            <%= link_to "Mostrar", dog_path(dog) %>
+            <%= link_to "Editar", edit_dog_path(dog) %>
+            <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
         </td>
     </tr>
     <% end %>
