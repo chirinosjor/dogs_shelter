@@ -1,4 +1,6 @@
 class DogsController < ApplicationController
+    before_action :find_dog, only: [:show, :edit, :update, :destroy]
+
     def index
         @dogs = Dog.all    
     end
@@ -16,8 +18,21 @@ class DogsController < ApplicationController
         end
     end
 
+    def show
+    end
+
+    def edit
+    end
+
+    def update
+    end
+
     private
         def dog_params
-            params.require(:dog).permit(:name, :dog_size, :age, :gender, :description)
+            params.require(:dog).permit(:id, :name, :dog_size, :age, :gender, :description)
+        end
+
+        def find_dog
+            @dog = Dog.find(params[:id])
         end
 end

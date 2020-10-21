@@ -1,0 +1,32 @@
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name%>
+    </div>
+    <div>
+        <%= f.label :dog_size %>
+        <%= f.radio_button(:dog_size, :small) %>
+        <%= f.label(:dog_size, :small) %>
+        <%= f.radio_button(:dog_size, :medium) %>
+        <%= f.label(:dog_size, :medium) %>
+        <%= f.radio_button(:dog_size, :large) %>
+        <%= f.label(:dog_size, :large) %>
+    </div>
+
+    <div>
+        <%= f.label :age %>
+        <%= f.number_field :age%>
+    </div>
+    <div>
+        <%= f.label :gender %>
+        <%= f.radio_button(:gender, :male) %>
+        <%= f.label(:gender, :male) %>
+        <%= f.radio_button(:gender, :female) %>
+        <%= f.label(:gender, :female) %>
+    </div>
+    <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
