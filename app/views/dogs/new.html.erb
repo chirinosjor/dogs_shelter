@@ -6,24 +6,13 @@
     </div>
     <div>
         <%= f.label :dog_size %>
-        <%= radio_button_tag(:dog_size, 0) %>
-        <%= label_tag(:dog_size, 0) %>
-        <%= radio_button_tag(:dog_size, 1) %>
-        <%= label_tag(:dog_size, 1) %>
-        <%= radio_button_tag(:dog_size, 2) %>
-        <%= label_tag(:dog_size, 2) %>
+        <%= f.radio_button(:dog_size, :small) %>
+        <%= f.label(:dog_size, :small) %>
+        <%= f.radio_button(:dog_size, :medium) %>
+        <%= f.label(:dog_size, :medium) %>
+        <%= f.radio_button(:dog_size, :large) %>
+        <%= f.label(:dog_size, :large) %>
     </div>
-
-
-    <div>
-        <%= f.label :dog_size %><br />
-        <%= f.label :dog_size, "Pequeño", :value => 0  %>
-        <%= f.radio_button :autolyse, true %>
-        <%= f.label :autolyse, "No", :value => "false" %>
-        <%= f.radio_button :autolyse, false, :checked => true %>
-    </div>
-
-
 
     <div>
         <%= f.label :age %>
@@ -31,10 +20,10 @@
     </div>
     <div>
         <%= f.label :gender %>
-        <%= radio_button_tag(:gender, "Macho") %>
-        <%= label_tag(:gender, "Macho") %>
-        <%= radio_button_tag(:gender, "Hembra") %>
-        <%= label_tag(:gender, "Hembra") %>
+        <%= f.radio_button(:gender, :male) %>
+        <%= f.label(:gender, :male) %>
+        <%= f.radio_button(:gender, :female) %>
+        <%= f.label(:gender, :female) %>
     </div>
     <div>
         <%= f.label :description %>
