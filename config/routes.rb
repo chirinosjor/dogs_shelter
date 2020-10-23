@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :staffs
+  root to: 'dogs#index'
   get '/dogs', to: 'dogs#index'
   get '/dogs/new', to: 'dogs#new'
   post '/dogs', to: 'dogs#create'

@@ -1,5 +1,7 @@
 <h1>Lista de perros disponibles</h1>
-<%= link_to "Ingresar nuevo perro", dogs_new_path%>
+<% if staff_signed_in? %>
+    <%= link_to "Ingresar nuevo perro", dogs_new_path%>
+<% end %>
 <table>
     <tr>
     <% @dogs.each do |dog| %>

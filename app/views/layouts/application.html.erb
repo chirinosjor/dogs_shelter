@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <% if staff_signed_in? %>
+        Welcome <%= current_staff.name %>
+        <%= button_to "logout", destroy_staff_session_path, method: :delete  %>      
+    <% else %>
+      ¿Eres parte del staff? Inicia sesión.
+      <%= button_to "login", new_staff_session_path %>  
+    <% end %>
+
+    <% if staff_signed_in? %>
+
+    <% end %>
     <%= yield %>
   </body>
 </html>
