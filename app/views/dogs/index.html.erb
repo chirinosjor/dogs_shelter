@@ -21,9 +21,12 @@
         <td><%= dog.description %></td>
         <td>
             <%= link_to "Mostrar", dog_path(dog) %>
-            <%= link_to "Editar", edit_dog_path(dog) %>
-            <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
+            <% if staff_signed_in? %>
+                <%= link_to "Editar", edit_dog_path(dog) %>
+                <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
+            <% end %>
         </td>
     </tr>
     <% end %>
 </table>
+
