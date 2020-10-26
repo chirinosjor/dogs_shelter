@@ -1,0 +1,30 @@
+<h1>Lista de refugios</h1>
+<% if staff_signed_in? %>
+    <%= link_to "Ingresar nuevo refugio", new_shelter_path%>
+<% end %>
+<table>
+    <tr>
+    <% @shelters.each do |shelter| %>
+        <thead>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Descripción</th>
+            <th>Capacidad máxima</th>
+        </thead>
+    </tr>
+    <tr>
+        <td><%= shelter.name %></td>
+        <td><%= shelter.address %></td>
+        <td><%= shelter.description %></td>
+        <td><%= shelter.capacity %></td>
+        <td>
+            <%= link_to "Mostrar", shelter_path(shelter) %>
+            <% if staff_signed_in? %>
+                <%= link_to "Editar", edit_shelter_path(shelter) %>
+                <%= link_to "Eliminar", shelter, method: :delete, data: { confirm: "¿Eliminar información?"} %>
+            <% end %>
+        </td>
+    </tr>
+    <% end %>
+</table>
+
