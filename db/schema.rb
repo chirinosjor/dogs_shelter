@@ -10,17 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_23_183559) do
+ActiveRecord::Schema.define(version: 2020_10_26_212857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
-    t.string "size"
+    t.string "dog_size"
     t.integer "age"
     t.string "gender"
     t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "shelter"
+    t.bigint "shelter_id"
+    t.index ["shelter_id"], name: "index_dogs_on_shelter_id"
+  end
+
+  create_table "shelters", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "description"
+    t.integer "capacity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,4 +50,5 @@ ActiveRecord::Schema.define(version: 2020_10_23_183559) do
     t.index ["reset_password_token"], name: "index_staffs_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "dogs", "shelters"
 end

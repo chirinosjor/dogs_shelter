@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shelters
   devise_for :staffs
   root to: 'dogs#index'
   get '/dogs', to: 'dogs#index'

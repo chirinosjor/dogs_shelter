@@ -8,6 +8,7 @@ class DogsController < ApplicationController
 
     def new
         @dog = Dog.new
+        # @dog.build_shelter
     end
 
     def create
@@ -37,7 +38,7 @@ class DogsController < ApplicationController
     
     private
         def dog_params
-            params.require(:dog).permit(:id, :name, :dog_size, :age, :gender, :description)
+            params.require(:dog).permit(:id, :name, :dog_size, :age, :gender, :description, :shelter_id)
         end
 
         def find_dog

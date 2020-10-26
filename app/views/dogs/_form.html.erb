@@ -28,5 +28,10 @@
         <%= f.text_area :description %>
     </div>
     <div>
+        <%= f.select :shelter_id, Shelter.all.collect {|s| [ s.id] },
+        { :include_blank => "Please select" } 
+        %>
+    </div>
+    <div>
         <%= f.submit %>
     </div>
