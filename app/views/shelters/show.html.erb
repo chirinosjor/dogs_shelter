@@ -1,5 +1,40 @@
-<h2><%= @shelter.name %></h2>
-<h2><%= @shelter.address %></h2>
-<h2><%= @shelter.description %></h2>
-<h2><%= @shelter.capacity %></h2>
+<div>
+    <h1><%= @shelter.name %></h2>
+</div>
 
+<div>
+    <h2>Detalles del refugio</h2>
+    <h3>Dirección:</h3> <%= @shelter.address %>
+    <h3>Descripción:</h3> <%= @shelter.description %>
+    <h3>Capacidad máxima:</h3> <%= @shelter.capacity %>
+</div>
+
+<h2>Perros dentro del refugio</h2>
+
+<table>
+    <tr>
+        <thead>
+            <th>Nombre:</th>
+            <th>Tamaño:</th>
+            <th>Edad:</th>
+            <th>Sexo:</th>
+            <th>Historia:</th>
+        </thead>
+    </tr>
+    <% @shelter.dogs.each do |dog| %>
+        <tr>
+            <td><%= dog.name %></td>
+            <td><%= dog.dog_size %></td>
+            <td><%= dog.age %></td>
+            <td><%= dog.gender %></td>
+            <td><%= dog.description %></td>
+            <td>
+                <%= link_to "Mostrar", dog_path(dog) %>
+                <% if staff_signed_in? %>
+                    <%= link_to "Editar", edit_dog_path(dog) %>
+                    <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
+                <% end %>
+            </td>
+        </tr>
+    <% end %>
+</table>

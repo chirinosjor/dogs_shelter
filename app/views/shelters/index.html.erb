@@ -4,7 +4,6 @@
 <% end %>
 <table>
     <tr>
-    <% @shelters.each do |shelter| %>
         <thead>
             <th>Nombre</th>
             <th>Dirección</th>
@@ -13,6 +12,7 @@
         </thead>
     </tr>
     <tr>
+        <% @shelters.each do |shelter| %>
         <td><%= shelter.name %></td>
         <td><%= shelter.address %></td>
         <td><%= shelter.description %></td>

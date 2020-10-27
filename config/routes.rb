@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+
+
   resources :shelters
   devise_for :staffs
+
+  # Root
   root to: 'dogs#index'
+
+  # Manual CRUD routing
   get '/dogs', to: 'dogs#index'
   get '/dogs/new', to: 'dogs#new'
   post '/dogs', to: 'dogs#create'
@@ -10,6 +16,7 @@ Rails.application.routes.draw do
   patch '/dogs/:id', to: 'dogs#update'
   get '/dogs/:id', to: 'dogs#show', as: 'dog'
   delete '/dogs/:id', to: 'dogs#destroy'
+
 
   #resources :dogs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

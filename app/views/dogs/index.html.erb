@@ -4,29 +4,31 @@
 <% end %>
 <table>
     <tr>
-    <% @dogs.each do |dog| %>
         <thead>
             <th>Nombre:</th>
             <th>Tamaño:</th>
             <th>Edad:</th>
             <th>Sexo:</th>
             <th>Historia:</th>
+            <th>Refugio:</th>
         </thead>
     </tr>
-    <tr>
-        <td><%= dog.name %></td>
-        <td><%= dog.dog_size %></td>
-        <td><%= dog.age %></td>
-        <td><%= dog.gender %></td>
-        <td><%= dog.description %></td>
-        <td>
-            <%= link_to "Mostrar", dog_path(dog) %>
-            <% if staff_signed_in? %>
-                <%= link_to "Editar", edit_dog_path(dog) %>
-                <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
-            <% end %>
-        </td>
-    </tr>
+    <% @dogs.each do |dog| %>
+        <tr>
+            <td><%= dog.name %></td>
+            <td><%= dog.dog_size %></td>
+            <td><%= dog.age %></td>
+            <td><%= dog.gender %></td>
+            <td><%= dog.description %></td>
+            <td><%= dog.shelter.name %></td>
+            <td>
+                <%= link_to "Mostrar", dog_path(dog) %>
+                <% if staff_signed_in? %>
+                    <%= link_to "Editar", edit_dog_path(dog) %>
+                    <%= link_to "Eliminar", dog, method: :delete, data: { confirm: "¿Eliminar información?"} %>
+                <% end %>
+            </td>
+        </tr>
     <% end %>
 </table>
 

@@ -12,7 +12,9 @@
   <body>
     <% if staff_signed_in? %>
         Welcome <%= current_staff.name %>
-        <%= button_to "logout", destroy_staff_session_path, method: :delete  %>      
+        <%= button_to "logout", destroy_staff_session_path, method: :delete  %>
+        <%= link_to "Ver refugios", shelters_path%>
+        <%= link_to "Ver perros", dogs_path%>          
     <% else %>
       ¿Eres parte del staff? Inicia sesión.
       <%= button_to "login", new_staff_session_path %>  
