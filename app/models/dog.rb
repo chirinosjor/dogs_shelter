@@ -3,25 +3,18 @@ class Dog < ApplicationRecord
     enum gender: {male: 0, female: 1}
 
     #Validations
-    validates :name,
-    format: { with:  /\A[a-zA-Z0-9 ]+\z/ }, 
-    presence: true,
-    length: {maximum: 15},
+    validates :name, :age, :gender, :description, :shelter_id,
     presence: true
+
+    validates :name,
+    format: { with:  /\A[a-zA-Z0-9 ]+\z/ },
+    length: {maximum: 15}
 
     validates :age, 
-    numericality: { less_than_or_equal_to: 10,  only_integer: true },
-    presence: true
-
-    validates :gender,
-    presence: true
+    numericality: { less_than_or_equal_to: 10,  only_integer: true }
     
     validates :description,
-    presence: true,
     length: {maximum: 100}
-
-    validates :shelter_id,
-    presence: true
 
 
     # Relations

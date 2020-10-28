@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :staffs
 
   # Root
-  root to: 'dogs#index'
+  root to: 'home#index'
 
   # Manual CRUD routing
   get '/dogs', to: 'dogs#index'

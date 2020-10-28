@@ -4,7 +4,7 @@
     </div>
     <div>
         <%= f.label :dog_size %>
-        <%= f.select :dog_size, options_for_select(Dog.dog_sizes.keys.to_a), {prompt: "Select Dog Size"}%>
+        <%= f.select :dog_size, options_for_select(Dog.dog_sizes.map {|k,v| [k,k]}), {prompt: "Select Dog Size"}%>
     </div>
     <div>
         <%= f.label :age %>
@@ -13,7 +13,7 @@
     <div>
     <div>
         <%= f.label :gender %>
-        <%= f.select :gender, options_for_select(Dog.genders.keys.to_a), {prompt: "Select Gender"}%>
+        <%= f.select :gender, options_for_select(Dog.genders.map {|k,v| [k,k]}), {prompt: "Select Gender"}%>
     </div>
     </div>
     <div>
