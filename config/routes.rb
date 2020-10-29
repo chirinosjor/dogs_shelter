@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   resources :shelters
   devise_for :staffs
+  # devise_scope :staff do
+  #   authenticated :staff do
+  #     root 'home#index', as: :authenticated_root
+  #   end
+  #   get 'staff', to: 'devise/sessions#new'
+  # end
 
   # Root
   root to: 'home#index'
