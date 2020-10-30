@@ -27,6 +27,7 @@ gem 'rails_12factor'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
 gem 'font_awesome5_rails'
+gem "google-cloud-storage", "~> 1.8", require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

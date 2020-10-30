@@ -1,19 +1,19 @@
-    <div>
-        <%= f.label :name %>
+    <div class="mt-5">
+        <%= f.label "Nombre:" %>
         <%= f.text_field :name%>
     </div>
     <div>
-        <%= f.label :address %>
+        <%= f.label "Dirección:" %>
         <%= f.text_field :address%>
     </div>
     <div>
-        <%= f.label :description %>
+        <%= f.label "Descripción:"%>
         <%= f.text_area :description %>
     </div>
     <div>
-        <%= f.label :capacity %>
+        <%= f.label "Capacidad:" %>
         <%= f.number_field :capacity%>
     </div>
-    <div>
-        <%= f.submit %>
+    <div class ="mt-5">
+        <%= f.submit class: 'btn btn-primary' %>
     </div>

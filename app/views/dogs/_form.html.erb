@@ -1,30 +1,39 @@
-    <div>
-        <%= f.label :name %>
-        <%= f.text_field :name%>
-    </div>
-    <div>
-        <%= f.label :dog_size %>
-        <%= f.select :dog_size, options_for_select(Dog.dog_sizes.map {|k,v| [k,k]}), {prompt: "Select Dog Size"}%>
-    </div>
-    <div>
-        <%= f.label :age %>
-        <%= f.number_field :age%>
-    </div>
-    <div>
-    <div>
-        <%= f.label :gender %>
-        <%= f.select :gender, options_for_select(Dog.genders.map {|k,v| [k,k]}), {prompt: "Select Gender"}%>
-    </div>
-    </div>
-    <div>
-        <%= f.label :description %>
-        <%= f.text_area :description %>
-    </div>
-    <div>
-        <%= f.select :shelter_id, Shelter.all.collect {|s| [ s.id] },
-        { :include_blank => "Please select" } 
-        %>
-    </div>
-    <div>
-        <%= f.submit %>
-    </div>
+<div class="mt-5">
+    <%= f.label "Nombre:"%>
+    <%= f.text_field :name%>
+</div>
+<div>
+    <%= f.label "Tamaño del perro:" %>
+    <%= f.select :dog_size, options_for_select(Dog.dog_sizes.map {|k,v| [k,k]}), {prompt: "Selecciona el tamaño"}%>
+</div>
+<div>
+    <%= f.label "Edad:" %>
+    <%= f.number_field :age%>
+</div>
+<div>
+<div>
+    <%= f.label "Sexo:" %>
+    <%= f.select :gender, options_for_select(Dog.genders.map {|k,v| [k,k]}), {prompt: "Selecciona el sexo"}%>
+</div>
+</div>
+<div>
+    <%= f.label "Su historia:" %>
+    <%= f.text_area :description %>
+</div>
+<div>
+    <%= f.label "Refugio:" %>
+    <%= f.select :shelter_id, Shelter.all.collect {|s| [ s.id] },
+    { :include_blank => "Selecciona un refugio" } 
+    %>
+</div>
+<div>
+    <%= f.label "Foto principal del perro" %>
+    <%= f.file_field :picture %>
+</div>
+<div>
+  <%= f.label "Otras fotos del perro" %>
+  <%= f.file_field :uploads, multiple: true %>
+</div>
+<div class ="mt-5">
+    <%= f.submit class: 'btn btn-primary' %>
+</div>
