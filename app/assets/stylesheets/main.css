@@ -91,7 +91,7 @@ textarea {
   margin: 0 auto;
   display: block;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .primary-navigation ul li {
@@ -104,6 +104,10 @@ textarea {
   text-decoration: none;
   text-align: center;
   font-family: arvo;
+}
+
+.primary-navigation ul li:last-child {
+  border-right: 2px solid #3ca0e7;
 }
 
 .primary-navigation li a {
@@ -168,6 +172,10 @@ transition: all 0.5s ease;
 Author's custom styles
 ========================================================================== */
 
+body {
+  font-family: arvo;
+}
+
 .hero { 
   position: relative; 
   height: 100vh;
@@ -221,6 +229,7 @@ Author's custom styles
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
 }
 
 .logo {
