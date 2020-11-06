@@ -1,0 +1,64 @@
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Sidebar - Brand -->
+        <%= link_to root_path, :class=> "sidebar-brand d-flex align-items-center justify-content-center" do %>
+            <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fas fa-paw"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">Refugio de perros</div>
+        <% end %>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+        <% if staff_signed_in? %>
+          <%= link_to "Cerrar sesión", destroy_staff_session_path, method: :delete, :class => "btn btn-danger"  %>       
+
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+
+          <!-- Nav Item - Dashboard -->
+          <li class="nav-item active">
+            <%= link_to root_path, :class=> "nav-link" do %>
+              <i class="fas fa-home"></i>
+              <span>Inicio</span></a>
+            <% end %>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            Refugios
+          </div>
+          <!-- Nav Item - Shelters -->
+          <li class="nav-item">
+            <%= link_to shelters_path, :class=> "nav-link" do %>
+              <i class="fas fa-warehouse"></i>
+              <span>Ver Refugios</span>
+            <% end %>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            Perros
+          </div>
+
+          <!-- Dogs -->
+          <li class="nav-item">
+            <%= link_to dogs_path, :class=> "nav-link" do %>
+              <i class="fas fa-dog"></i>
+              <span>Ver Perros</span>
+          </li>
+        <% end %>
+      
+      <% else %>
+        <p class="text-white text-center mt-5"> ¿Eres parte del staff? <br> Inicia sesión. <br></p>
+        <%= link_to "Iniciar sesión", new_staff_session_path, :class => "btn btn-info" %>  
+      <% end %>
+
+      </ul>
+      <!-- End of Sidebar -->

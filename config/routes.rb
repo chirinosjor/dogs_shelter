@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # end
 
   # Root
+  
   root to: 'home#index'
 
   # Manual CRUD routing
