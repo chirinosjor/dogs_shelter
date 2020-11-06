@@ -84,14 +84,152 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+    TOP NAVBAR
    ========================================================================== */
 
-.hero {
-background-image: url(<%= asset_path 'wallpaper.jpg' %>);
-height: 100vh;
+.primary-navigation {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 16px;
 }
 
+.primary-navigation ul li {
+  list-style: none;
+  margin: 0 auto;
+  border-left: 2px solid #3ca0e7;
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-family: arvo;
+}
+
+.primary-navigation li a {
+  color: white;
+}
+
+.primary-navigation li a:hover {
+  color: #3ca0e7;
+}
+
+.primary-navigation ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding-left: 0;
+  left: 0;
+  display: none;
+  background: white;
+}
+
+.primary-navigation ul li:hover > ul,
+.primary-navigation ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  min-width: 250px;
+  text-align: left;
+  padding-top: 20px;
+  box-shadow: 0px 3px 5px -1px #ccc;
+}
+
+.primary-navigation ul li ul li {
+  clear: both;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  border-style: none;
+}
+
+.primary-navigation ul li ul li a:hover {
+  padding-left: 10px;
+  border-left: 2px solid #3ca0e7;
+  transition: all 0.3s ease;
+}
+
+.primary-navigation a {
+text-decoration: none;
+}
+
+.primary-navigation:hover {
+  color: #3ca0e7;
+}
+
+
+.primary-navigation ul li ul li a {
+transition: all 0.5s ease;
+}
+
+.primary-navigation ul li ul li a { transition: all 0.5s ease; }
+
+/* ==========================================================================
+Author's custom styles
+========================================================================== */
+
+.hero { 
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("wallpaper.jpg");
+  background-size: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.35);
+}
+
+.contenido-header {
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+  width: 80%;
+}
+
+.redes-sociales {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.redes-sociales a {
+  color: white;
+  font-size: 2em;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.redes-sociales a:last-child {
+  margin-right: 0;
+}
+
+.redes-sociales a:hover {
+  color: #3ca0e7;
+}
+
+.nombre-sitio {
+  color: white;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  background: url("paw-logo.png");
+  background-position: top center;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
