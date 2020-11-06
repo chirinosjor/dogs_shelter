@@ -17,6 +17,9 @@ html {
   line-height: 1.4;
 }
 
+*, *::before, *::after {
+  box-sizing: unset;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -111,7 +114,7 @@ textarea {
 }
 
 .primary-navigation li a {
-  color: white;
+  color: black;
 }
 
 .primary-navigation li a:hover {
@@ -176,40 +179,32 @@ body {
   font-family: arvo;
 }
 
-.hero { 
-  position: relative; 
-  height: 100vh;
+.navbar {
+  color: black;
+  max-height: 100px;
   width: 100%;
   display: flex;
-  justify-content: center;
-  background-image: url("wallpaper.jpg");
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  background: url("paw-logo.png");
+  height: 100px;
+  width: 100px;
   background-size: cover;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0,0,0,0.35);
-}
-
 .contenido-header {
-  padding-top: 20px;
-  text-align: center;
-  position: relative;
   width: 80%;
 }
 
 .redes-sociales {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .redes-sociales a {
-  color: white;
+  color: black;
   font-size: 2em;
   margin-right: 20px;
   text-decoration: none;
@@ -223,22 +218,6 @@ body {
   color: #3ca0e7;
 }
 
-.nombre-sitio {
-  color: white;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.logo {
-  background: url("paw-logo.png");
-  background-position: top center;
-  height: 200px;
-  width: 200px;
-  background-size: cover;
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

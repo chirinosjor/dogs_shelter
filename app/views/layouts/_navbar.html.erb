@@ -1,24 +1,30 @@
 <!-- Topbar -->
-<nav class="redes-sociales">
-  <%= link_to "#" do %>
-    <i class="fab fa-facebook-square"></i>
-  <% end %>
-  <%= link_to "#" do %>
-    <i class="fab fa-twitter-square"></i>
-  <% end %>
-  <%= link_to "#" do %>
-    <i class="fab fa-instagram"></i>
-  <% end %>
-  <%= link_to "#" do %>
-    <i class="fab fa-youtube"></i>
-  <% end %>
-</nav>
-<nav role="navigation" class="primary-navigation">
-  <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Quienes somos</a></li>
-    <li><a href="#">Adopta</a></li>
-    <li><a href="#">Contacto</a></li>
-  </ul>
-</nav>
+<div class="navbar">
+  <div class="left">
+    <div class="logo">
+    </div>
+  </div>
+  <div class="right">
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <%= link_to "#" do %>
+        <i class="fab fa-twitter-square"></i>
+      <% end %>
+      <%= link_to "#" do %>
+        <i class="fab fa-instagram"></i>
+      <% end %>
+      <%= link_to "#" do %>
+        <i class="fab fa-youtube"></i>
+      <% end %>
+    </div>
+    <nav role="navigation" class="primary-navigation">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Quienes somos</a></li>
+        <li><a href="#">Adopta</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 <!-- End of Topbar -->
