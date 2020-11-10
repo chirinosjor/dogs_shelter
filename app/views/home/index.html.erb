@@ -13,12 +13,95 @@
   <%= stylesheet_link_tag 'home.css' %>
 </head>
 <body>
-  <div class="hero">
+  <section class="hero">
     <%= render "layouts/navbar" %>
-  </div>
-  <div class="contenedor">
-    <%= yield %>
-  </div>
+  </section>
+  <section class="contenedor seccion">
+    <div class="encabezado">
+      <h2>Forma parte del equipo</h2>
+    </div>
+    <div class="iconos-info">
+      <div class="icono">
+        <img src="<%= image_url('adopt.png') %>" alt="adopt">
+        <h3>Quiero adoptar</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad commodi minima 
+        aliquid optio suscipit non? Aut neque rem repellat, eveniet distinctio quia 
+        dolores quas fugiat, animi in libero, asperiores fugit!</p>
+        <button class="btn btn-info">Adoptar</button>
+      </div>
+            
+      <div class="icono">
+        <img src="<%= image_url('donation.png') %>" alt="adopt">
+        <h3>Quiero donar</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad commodi minima 
+        aliquid optio suscipit non? Aut neque rem repellat, eveniet distinctio quia 
+        dolores quas fugiat, animi in libero, asperiores fugit!</p>
+        <button class="btn btn-info">Donar</button>
+      </div>
+            
+      <div class="icono">
+        <img src="<%= image_url('volunteer.png') %>" alt="adopt">
+        <h3>Quiero ser voluntario</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad commodi minima 
+        aliquid optio suscipit non? Aut neque rem repellat, eveniet distinctio quia 
+        dolores quas fugiat, animi in libero, asperiores fugit!</p>
+        <button class="btn btn-info">Mas información</button>
+      </div>
+    </div>
+  </section>
+  <section class="contador parallax">
+    <div class="contenedor">
+      <ul class="resumen-numeros clearfix">
+        <li><p class="numero">10</p>Refugios</li>
+        <li><p class="numero">15</p>Perros</li>
+        <li><p class="numero">30</p>Voluntarios</li>
+      </ul>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="contenedor clearfix">
+      <div class="footer-info">
+        <h3>Sobre <span>nosotros</span></h3>        
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+          deserunt, dicta quidem voluptate aliquid, voluptatum quis sequi minus expedita alias totam
+          praesentium aspernatur ut quo corrupti.</p>
+      </div>
+      <div class="ultimos-tweets">
+        <h3>Últimos <span>Tweets</span></h3>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+            praesentium aspernatur ut quo corrupti.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+            praesentium aspernatur ut quo corrupti.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+            praesentium aspernatur ut quo corrupti.
+          </li>
+        </ul>
+      </div>
+      <div class="redes">
+        <h3>Redes <span>sociales</span></h3>
+        <div class="redes-sociales">
+          <%= link_to "#" do %>
+            <i class="fab fa-facebook-square"></i>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fab fa-twitter-square"></i>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fab fa-instagram"></i>
+          <% end %>
+          <%= link_to "#" do %>
+            <i class="fab fa-youtube"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
