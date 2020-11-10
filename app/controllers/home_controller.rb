@@ -3,6 +3,5 @@ class HomeController < ApplicationController
         @shelters = Shelter.all
         @dogs = Dog.all
         @staffs = Staff.all  
-        render :layout => false
     end
 end

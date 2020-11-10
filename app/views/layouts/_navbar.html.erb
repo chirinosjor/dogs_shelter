@@ -1,12 +1,15 @@
 <!-- Topbar -->
 <div class="navbar">
-  <div class="left">
-    <div class="logo">
-    </div>
+  <div class="logo">
+      <%= link_to(root_path) do %>
+        <%= image_tag("paw-logo.png", style: 'height:100px;width:100px;')%>
+      <% end %>
   </div>
   <div class="right">
     <div class="redes-sociales">
-        <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <%= link_to "#" do %>
+        <i class="fab fa-facebook-square"></i>
+      <% end %>
       <%= link_to "#" do %>
         <i class="fab fa-twitter-square"></i>
       <% end %>
@@ -19,10 +22,10 @@
     </div>
     <nav role="navigation" class="primary-navigation">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Quienes somos</a></li>
-        <li><a href="#">Adopta</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><%= link_to "Inicio", root_path %></li>
+        <li><%= link_to "Quienes somos", root_path %></li>
+        <li><%= link_to "Adopta", dogs_path %></li>
+        <li><%= link_to "Contacto", root_path %></li>
       </ul>
     </nav>
   </div>

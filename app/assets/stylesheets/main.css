@@ -17,9 +17,9 @@ html {
   line-height: 1.4;
 }
 
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: unset;
-}
+} */
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -87,8 +87,56 @@ textarea {
 }
 
 /* ==========================================================================
+  GLOBALES
+========================================================================== */
+
+span {
+  color: #3ca0e7;
+  font-weight: bold;
+  font-family: arvo;
+}
+
+.contenedor {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.seccion {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: arvo;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: arvo;
+}
+
+h2::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url("separator.png");
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
     TOP NAVBAR
-   ========================================================================== */
+    ========================================================================== */
 
 .primary-navigation {
   margin: 0 auto;
@@ -175,27 +223,39 @@ transition: all 0.5s ease;
 Author's custom styles
 ========================================================================== */
 
-body {
-  font-family: arvo;
+.hero { 
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("wallpaper.jpg");
+  background-size: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.35);
 }
 
 .navbar {
   color: black;
-  max-height: 100px;
-  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.left {
-  background: url("paw-logo.png");
-  height: 100px;
-  width: 100px;
-  background-size: cover;
+  padding: 0;
 }
 
 .contenido-header {
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
   width: 80%;
 }
 
@@ -218,6 +278,130 @@ body {
   color: #3ca0e7;
 }
 
+/**Iconos info **/
+.iconos-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icono {
+  text-align: center;
+  flex-basis: calc( 33.3% - 10px);
+}
+
+.icono h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #3ca0e7;
+}
+
+.btn-info {
+  background-color: #3ca0e7;
+  text-transform: uppercase;
+}
+
+/** Contador **/
+
+.parallax::before {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contador {
+  position: relative;
+  height: auto;
+}
+
+.contador::before {
+  background-image: url("parallax.png");
+  content: '';
+}
+
+.resumen-numeros {
+  position: relative;
+  padding: 120px 0;
+}
+
+.resumen-numeros ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.resumen-numeros li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.resumen-numeros {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numero {
+  color: #3ca0e7;
+  font-size: 70px;
+  display: block;
+  margin: 0 0 10px 0;
+  text-align: center;
+  flex-basis: calc( 33.3% - 10px);
+  font-weight: bold;
+}
+
+/** Alianzas **/
+
+.lista-alianzas li {
+  padding: 10px;
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  padding: 10px;
+}
+
+/** Footer **/
+
+footer {
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+footer .contenedor > div {
+  width: 33.3%;
+  float: left;
+}
+
+footer h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.redes a {
+  color:  #3ca0e7;
+  font-size: 2em;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.redes a:last-child {
+  margin-right: 0;
+}
+
+.redes a:hover {
+  color: #3ca0e7;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
