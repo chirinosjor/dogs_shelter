@@ -52,9 +52,9 @@
   <section class="contador parallax">
     <div class="contenedor">
       <ul class="resumen-numeros clearfix">
-        <li><p class="numero">10</p>Refugios</li>
-        <li><p class="numero">15</p>Perros</li>
-        <li><p class="numero">30</p>Voluntarios</li>
+        <li><p class="numero"><%= @shelters.each.size %></p>Refugios</li>
+        <li><p class="numero"><%= @dogs.each.size %></p>Perros</li>
+        <li><p class="numero"><%= @shelters.each.size %></p>Voluntarios</li>
       </ul>
     </div>
   </section>
