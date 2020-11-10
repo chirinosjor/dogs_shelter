@@ -82,7 +82,56 @@
   textarea {
     resize: vertical;
   }
+
+
+  /* ==========================================================================
+      GLOBALES
+     ========================================================================== */
+
+  span {
+    color: #3ca0e7;
+    font-weight: bold;
+    font-family: arvo;
+  }
+
+  .contenedor {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .seccion {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
   
+  body {
+    font-family: arvo;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: arvo;
+  }
+
+  h2::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url("separator.png");
+    height: 30px;
+    width: 100px;
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   /* ==========================================================================
       TOP NAVBAR
      ========================================================================== */
@@ -172,37 +221,6 @@
   Author's custom styles
   ========================================================================== */
 
-  /** Utilidades **/
-
-  span {
-    color: #3ca0e7;
-    font-weight: bold;
-    font-family: arvo;
-  }
-
-  .contenedor {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-
-  .encabezado {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: arvo;
-  }
-
-  .seccion {
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-  
-  body {
-    font-family: arvo;
-  }
- 
   .hero { 
     position: relative; 
     height: 100vh;
@@ -349,6 +367,18 @@
     flex-basis: calc( 33.3% - 10px);
     font-weight: bold;
   }
+
+  /** Alianzas **/
+
+  .lista-alianzas li {
+    padding: 10px;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /** Footer **/
 
   footer {
     padding-top: 40px;

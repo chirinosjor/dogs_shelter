@@ -17,9 +17,7 @@
     <%= render "layouts/navbar" %>
   </section>
   <section class="contenedor seccion">
-    <div class="encabezado">
       <h2>Forma parte del equipo</h2>
-    </div>
     <div class="iconos-info">
       <div class="icono">
         <img src="<%= image_url('adopt.png') %>" alt="adopt">
@@ -54,9 +52,32 @@
       <ul class="resumen-numeros clearfix">
         <li><p class="numero"><%= @shelters.each.size %></p>Refugios</li>
         <li><p class="numero"><%= @dogs.each.size %></p>Perros</li>
-        <li><p class="numero"><%= @shelters.each.size %></p>Voluntarios</li>
+        <li><p class="numero"><%= @staffs.each.size %></p>Voluntarios</li>
       </ul>
     </div>
+  </section>
+  <section class="alianzas contenedor seccion">
+        <h2>Nuestras alianzas</h2>
+        <ul class="lista-alianzas clearfix">
+          <li>
+            <img src="<%= image_url('alianza_1.png') %>" alt="alianza 1">
+          </li>
+          <li>
+            <img src="<%= image_url('alianza_2.png') %>" alt="alianza 1">
+          </li>
+          <li>
+            <img src="<%= image_url('alianza_3.png') %>" alt="alianza 1">
+          </li>
+          <li>
+            <img src="<%= image_url('alianza_4.png') %>" alt="alianza 1">
+          </li>
+          <li>
+            <img src="<%= image_url('alianza_5.png') %>" alt="alianza 1">
+          </li>
+          <li>
+            <img src="<%= image_url('alianza_6.png') %>" alt="alianza 1">
+          </li>
+        </ul>
   </section>
   <footer class="site-footer">
     <div class="contenedor clearfix">
