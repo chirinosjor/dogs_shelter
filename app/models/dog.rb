@@ -6,7 +6,7 @@ class Dog < ApplicationRecord
     has_many_attached :uploads
 
     #Validations
-    validates :name, :age, :gender, :description, :shelter_id,
+    validates :name, :age, :gender, :description, :shelter_id, :picture,
     presence: true
 
     validates :name,

@@ -1,4 +1,7 @@
-<h1>Lista de perros</h1>
+<div class="encabezado">
+    <h2>Adopta un perro</h2>
+</div>
+
 <% if staff_signed_in? %>
     <%= link_to dogs_new_path, :class=> "btn btn-info" do %>
         <i class="fas fa-plus-square"></i>
@@ -6,35 +9,15 @@
     <% end %>
 <% end %>
 
-
-<div class="row justify-content-center mt-5">
-    <div class="col-auto">
-        <table class="table table-responsive">
-            <tr>
-                <thead class= 'text-center'>
-                    <th>Nombre</th>
-                    <th>Tamaño</th>
-                    <th>Edad</th>
-                    <th>Sexo</th>
-                    <th>Historia</th>
-                    <th>Refugio</th>
-                </thead>
-            </tr>
-            <% @dogs.each do |dog| %>
-            <tr class= 'text-center'>
-                <td ><%= dog.name %></td>
-                <td ><%= dog.dog_size %></td>
-                <td ><%= dog.age %></td>
-                <td ><%= dog.gender %></td>
-                <td ><%= dog.description %></td>
-                <td ><%= dog.shelter.name %></td>
-                <td>
-                    <%= link_to "Mostrar", dog_path(dog), :class => "btn btn-success" %>
-                    <%= link_to "Editar", edit_dog_path(dog), :class => "btn btn-warning"  %>
-                    <%= link_to "Eliminar", dog, :class => "btn btn-danger", method: :delete, data: { confirm: "¿Eliminar información?"} %>
-                </td>
-            </tr>
-            <% end %>
-        </table>
-    </div>
-</div>
+<section class="contenedor seccion">
+    <ul class="lista-perros clearfix">
+    <% @dogs.each do |dog| %>
+        <li>
+            <div>
+                <%= link_to image_tag(dog.picture, width: 200), dog_path(dog) %> 
+                <h3><%= dog.name %></h3>
+            </div>
+        </li>
+    <% end %>
+    </ul>
+</section>

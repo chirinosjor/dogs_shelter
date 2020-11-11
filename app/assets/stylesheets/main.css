@@ -17,9 +17,9 @@ html {
   line-height: 1.4;
 }
 
-/* *, *::before, *::after {
+*, *::before, *::after {
   box-sizing: unset;
-} */
+} 
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -363,12 +363,14 @@ Author's custom styles
 
 /** Alianzas **/
 
+
 .lista-alianzas li {
   padding: 10px;
   float: left;
   width: 33.3%;
   text-align: center;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 /** Footer **/
@@ -402,18 +404,32 @@ footer h3 {
 .redes a:hover {
   color: #3ca0e7;
 }
+
+/** Index en seccion DOGS **/
+
+.encabezado h2 {
+  margin-top: 50px;
+}
+
+.lista-perros li {
+  padding: 10px;
+  float: left;
+  width: 33.3%;
+  height: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.lista-perros li h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #3ca0e7;
+}
+
 /* ==========================================================================
    Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
+   ================<h2>Adopta un perro</h2>
 
 /*
  * Hide only visually, but have it available for screen readers:
