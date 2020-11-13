@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
 
-
   resources :shelters
   devise_for :staffs
-  # devise_scope :staff do
-  #   authenticated :staff do
-  #     root 'home#index', as: :authenticated_root
-  #   end
-  #   get 'staff', to: 'devise/sessions#new'
-  # end
 
   # Root
   
@@ -23,7 +16,7 @@ Rails.application.routes.draw do
   patch '/dogs/:id', to: 'dogs#update'
   get '/dogs/:id', to: 'dogs#show', as: 'dog'
   delete '/dogs/:id', to: 'dogs#destroy'
-
+  get '/panel', to: 'home#panel'
 
   #resources :dogs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -1,22 +1,38 @@
-<h2>
-<%= @dog.name %>
-<%= @dog.dog_size %>
-<%= @dog.age %>
-<%= @dog.gender %>
-<%= @dog.description %>
-</h2>
+<div class="encabezado">
+    <h2><span><%= @dog.name %></span></h2>
+</div>
 
-<p>
-  <%= image_tag(@dog.picture, width: 200) if @dog.picture.attached? %> 
-</p>
-
-<p>
-  <strong>Más fotos:</strong> <br/>
-  <% if @dog.uploads.attached? %>
-    <% @dog.uploads.each do |upload| %>
-      <%= link_to upload.filename, upload, target: '_blank' %> <br/>
-    <% end %>
-  <% else %>
-    <p>No hay más fotos...</p>
-  <% end %>
-</p>
+<section class="dog-details contenedor">
+  <div class="dog-image">
+    <%= image_tag(@dog.picture, size: '500x500')%>
+    <p>
+      <strong>Más fotos:</strong> <br/>
+      <% if @dog.uploads.attached? %>
+        <% @dog.uploads.each do |upload| %>
+          <%= link_to upload.filename, upload, target: '_blank' %> <br/>
+        <% end %>
+      <% else %>
+        <p>No hay más fotos...</p>
+      <% end %>
+    </p> 
+  </div>
+  <div class="dog-attributes">
+    <ul>
+      <li><p>Tamaño: <%= @dog.dog_size %></p></li>
+      <li><p>Edad: <%= @dog.age %></p></li>
+      <li><p>Genero: <%= @dog.gender %></p></li>
+      <li><p><%= @dog.description %></p></li>
+    </ul>
+  </div>
+</section>
+<section class="contenedor">
+  <div class="encabezado">
+    <h2>¿Quieres adoptar a <span><%= @dog.name %></span>?</h2>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque sit vel ad hic dicta amet 
+    porro, nisi quam, quasi eius ipsam reiciendis iure ratione quo dignissimos, eligendi suscipit 
+    vitae perspiciatis?</p>
+    <%= button_to "Adoptar", dogs_path, method: :get, class:"btn btn-info center" %>
+  </div>
+</section>

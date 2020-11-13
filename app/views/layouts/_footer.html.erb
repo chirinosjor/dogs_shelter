@@ -1,0 +1,56 @@
+<footer class="site-footer">
+  <div class="contenedor clearfix">
+    <div class="footer-info">
+      <h3>Sobre <span>nosotros</span></h3>        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+        deserunt, dicta quidem voluptate aliquid, voluptatum quis sequi minus expedita alias totam
+        praesentium aspernatur ut quo corrupti.</p>
+    </div>
+    <div class="ultimos-tweets">
+      <h3>Últimos <span>Tweets</span></h3>
+      <ul>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+          praesentium aspernatur ut quo corrupti.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+          praesentium aspernatur ut quo corrupti.
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum neque nobis veniam quaerat
+          praesentium aspernatur ut quo corrupti.
+        </li>
+      </ul>
+    </div>
+    <div class="redes">
+      <h3>Redes <span>sociales</span></h3>
+      <div class="redes-sociales">
+        <%= link_to "#" do %>
+          <i class="fab fa-facebook-square"></i>
+        <% end %>
+        <%= link_to "#" do %>
+          <i class="fab fa-twitter-square"></i>
+        <% end %>
+        <%= link_to "#" do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
+        <%= link_to "#" do %>
+          <i class="fab fa-youtube"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="creditos">
+    <p>Todos los derechos reservados. Jorge Chirinos.</p>
+  </div>
+  <div class="sesion">
+    <% if staff_signed_in? %>
+      <p><%= link_to "Ir al panel de control", panel_path %></p>
+      <p><%= link_to "Cerrar sesión", destroy_staff_session_path, method: :delete %></p>
+    <% else %>
+      <p>¿Eres parte del staff?</p>
+      <%= link_to "Iniciar sesión", new_staff_session_path %>
+    <% end %>
+  </div>
+</footer>

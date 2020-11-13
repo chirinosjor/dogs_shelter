@@ -4,4 +4,8 @@ class HomeController < ApplicationController
         @dogs = Dog.all
         @staffs = Staff.all  
     end
+
+    def panel
+      render layout: false
+    end
 end

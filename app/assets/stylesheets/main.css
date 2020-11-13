@@ -97,7 +97,7 @@ span {
 }
 
 .contenedor {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -111,15 +111,26 @@ body {
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 0px;
-  text-transform: uppercase;
   font-weight: bold;
   font-family: arvo;
 }
 
-h2::after {
+h3 {
+  font-weight: bold;
+  font-family: arvo;
+}
+
+body > section:nth-child(4) > div:nth-child(2) > form {
+  text-align: center;
+}
+.encabezado {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.encabezado::after {
   content: '';
   margin: 0 auto;
   background-image: url("separator.png");
@@ -250,6 +261,8 @@ Author's custom styles
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  background-color: lightgray;
+  border: solid 1px black;
 }
 
 .contenido-header {
@@ -378,6 +391,7 @@ Author's custom styles
 footer {
   padding-top: 40px;
   margin-top: 20px;
+  background-color: lightgray;
 }
 
 footer .contenedor > div {
@@ -405,11 +419,20 @@ footer h3 {
   color: #3ca0e7;
 }
 
-/** Index en seccion DOGS **/
-
-.encabezado h2 {
-  margin-top: 50px;
+.creditos {
+  text-align: center;
+  margin-top: 30px;
 }
+
+.sesion {
+  font-size: small;
+  text-align: center;
+}
+
+.sesion p {
+  margin-bottom: 0;
+}
+/** Index en seccion DOGS **/
 
 .lista-perros li {
   padding: 10px;
@@ -426,6 +449,25 @@ footer h3 {
   margin-top: 5px;
   color: #3ca0e7;
 }
+
+
+/** show en seccion DOGS **/
+
+.dog-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dog-image {
+  width: 50%;
+}
+
+.dog-attributes {
+  width: 50%;
+}
+
+
 
 /* ==========================================================================
    Helper classes
