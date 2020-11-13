@@ -7,7 +7,7 @@
     <% @dogs.each do |dog| %>
         <li>
             <div>
-                <%= link_to image_tag(dog.picture, size: '200x200'), dog_path(dog) %> 
+                <%= link_to image_tag(dog.picture, size: '200x200'), dog_path(dog) if dog.picture.attached? %> 
                 <h3><%= dog.name %></h3>
             </div>
         </li>
