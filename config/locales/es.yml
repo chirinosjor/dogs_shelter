@@ -1,0 +1,13 @@
+---
+es:
+  errors:
+    messages:
+      not_saved: Not saved
+  hello: Hello world
+  session:
+    email: Correo electrónico
+    forgot_password: Olvidé mi contraseña
+    log_in: Iniciar sesión
+    password: Contraseña
+    remember_me: Recordarme
+    sign_up: Registrarme

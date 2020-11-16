@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   patch '/dogs/:id', to: 'dogs#update'
   get '/dogs/:id', to: 'dogs#show', as: 'dog'
   delete '/dogs/:id', to: 'dogs#destroy'
-  get '/panel', to: 'home#panel'
+  get '/admin', to: 'admin#index'
 
   #resources :dogs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

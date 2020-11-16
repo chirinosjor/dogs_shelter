@@ -46,7 +46,7 @@
   </div>
   <div class="sesion">
     <% if staff_signed_in? %>
-      <p><%= link_to "Ir al panel de control", panel_path %></p>
+      <p><%= link_to "Ir al panel de control", admin_path %></p>
       <p><%= link_to "Cerrar sesión", destroy_staff_session_path, method: :delete %></p>
     <% else %>
       <p>¿Eres parte del staff?</p>
