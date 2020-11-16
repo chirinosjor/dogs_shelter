@@ -2,8 +2,12 @@ class SheltersController < ApplicationController
     before_action :find_shelter, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_staff!
 
+    # Layout for admin panel    
+    layout "admin"
+
+
     def index
-        @shelters = Shelter.all    
+        @shelters = Shelter.all   
     end
 
     def new

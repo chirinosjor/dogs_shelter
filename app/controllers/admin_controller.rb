@@ -2,6 +2,6 @@ class AdminController < ApplicationController
   before_action :authenticate_staff!
   
   def index
-    render layout: false
+    render layout: "admin"
   end
 end
