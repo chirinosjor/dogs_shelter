@@ -11,3 +11,8 @@ es:
     password: Contraseña
     remember_me: Recordarme
     sign_up: Registrarme
+  small: "Pequeño"
+  medium: "Mediano"
+  large: "Grande"
+  male: "Macho"
+  female: "Hembra"

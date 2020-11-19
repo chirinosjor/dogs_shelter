@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get '/dogs/:id', to: 'dogs#show', as: 'dog'
   delete '/dogs/:id', to: 'dogs#destroy'
   get '/admin', to: 'admin#index'
+  get '/admin/dogs', to: 'admin#dogs'
+  get '/admin/shelters', to: 'admin#shelters'
 
   #resources :dogs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

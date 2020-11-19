@@ -13,6 +13,7 @@ module Refuge
     config.serve_static_assets = true
     # Use Vips for processing variants.
     config.active_storage.variant_processor = :vips
+    config.i18n.default_locale = :es
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

@@ -24,7 +24,7 @@ gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'rails_12factor'
-gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 gem 'font_awesome5_rails'
 gem "google-cloud-storage", "~> 1.8", require: false

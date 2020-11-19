@@ -5,22 +5,22 @@
 <section class="dog-details contenedor">
   <div class="dog-image">
     <%= image_tag(@dog.picture, size: '500x500')%>
-    <p>
-      <strong>Más fotos:</strong> <br/>
+
+    <strong>Más fotos:</strong> <br/>
+    <div class="uploads">
       <% if @dog.uploads.attached? %>
         <% @dog.uploads.each do |upload| %>
-          <%= link_to upload.filename, upload, target: '_blank' %> <br/>
+          <%= link_to image_tag(upload, size: '50x50'), upload, target: '_blank' %> <br/>
         <% end %>
-      <% else %>
-        <p>No hay más fotos...</p>
       <% end %>
-    </p> 
+    </div> 
   </div>
   <div class="dog-attributes">
     <ul>
-      <li><p>Tamaño: <%= @dog.dog_size %></p></li>
+      <h3>Detalles sobre <%= @dog.name %></h3>
+      <li><p>Tamaño: <%= I18n.t(@dog.dog_size) %></p></li>
       <li><p>Edad: <%= @dog.age %></p></li>
-      <li><p>Genero: <%= @dog.gender %></p></li>
+      <li><p>Genero: <%= I18n.t(@dog.gender) %></p></li>
       <li><p><%= @dog.description %></p></li>
     </ul>
   </div>

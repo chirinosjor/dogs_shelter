@@ -468,7 +468,13 @@ footer h3 {
 
 .dog-attributes {
   width: 50%;
+  text-align: center;
 }
+
+.uploads {
+  display: flex;
+}
+
 
 
 /** Pantalla Log-in **/

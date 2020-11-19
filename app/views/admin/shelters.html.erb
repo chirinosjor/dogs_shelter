@@ -1,0 +1,38 @@
+<h1>Lista de refugios</h1>
+
+<% if staff_signed_in? %>
+    <%= link_to new_shelter_path, :class=> "btn btn-info" do %>
+        <i class="fas fa-plus-square"></i>
+        <span>Ingresar nuevo refugio</span></a>
+        <%= button_to "logout", destroy_staff_session_path, method: :delete  %>
+    <% end %>
+<% end %>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-auto">
+        <table class="table table-responsive">
+            <tr>
+                <thead class= 'text-center'>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Descripción</th>
+                    <th>Capacidad disponible</th>
+                </thead>
+            </tr>
+            <% @shelters.each do |shelter| %>
+            <tr class= 'text-center'>
+                <td><%= shelter.name %></td>
+                <td><%= shelter.address %></td>
+                <td><%= shelter.description %></td>
+                <td><%= shelter.capacity %></td>
+                <td>
+                    <%= link_to "Mostrar", shelter_path(shelter), :class => "btn btn-success" %>
+                    <%= link_to "Editar", edit_shelter_path(shelter), :class => "btn btn-warning"  %>
+                    <%= link_to "Eliminar", shelter, :class => "btn btn-danger", method: :delete, data: { confirm: "¿Eliminar información?"} %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
+
