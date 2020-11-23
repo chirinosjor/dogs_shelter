@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#index'
   get '/admin/dogs', to: 'admin#dogs'
   get '/admin/shelters', to: 'admin#shelters'
+  get '/about', to: 'home#about'
+  get '/contact', to: 'contacts#new', as: 'contacts'
+  post '/contact', to: 'contacts#create'
 
   #resources :dogs
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

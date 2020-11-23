@@ -1,13 +1,21 @@
 ---
 en:
+  email: Email
   errors:
     messages:
       not_saved: Not saved
+  female: Female
   hello: Hello world
+  large: Large
+  male: Male
+  medium: Medium
+  message: Message
+  name: Name
   session:
-    email: Correo electrónico
+    email: Email
     forgot_password: Forgot password
     log_in: Log in
     password: Password
     remember_me: Remember me
     sign_up: Sign up
+  small: Small

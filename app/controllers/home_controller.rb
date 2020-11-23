@@ -4,4 +4,7 @@ class HomeController < ApplicationController
     @dogs = Dog.all
     @staffs = Staff.all  
   end
+
+  def about
+  end
 end

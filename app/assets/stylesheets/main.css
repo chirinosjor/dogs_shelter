@@ -477,8 +477,20 @@ footer h3 {
 
 
 
-/** Pantalla Log-in **/
+/** NOSOTROS **/
 
+.aboutus {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video {
+  margin-right: 10px;
+}
+
+.info {
+  text-align: center;
+}
 
 
 /* ==========================================================================
