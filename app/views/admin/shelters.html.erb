@@ -4,7 +4,6 @@
     <%= link_to new_shelter_path, :class=> "btn btn-info" do %>
         <i class="fas fa-plus-square"></i>
         <span>Ingresar nuevo refugio</span></a>
-        <%= button_to "logout", destroy_staff_session_path, method: :delete  %>
     <% end %>
 <% end %>
 
@@ -17,6 +16,7 @@
                     <th>Dirección</th>
                     <th>Descripción</th>
                     <th>Capacidad disponible</th>
+                    <th>Acciones disponibles</th>
                 </thead>
             </tr>
             <% @shelters.each do |shelter| %>

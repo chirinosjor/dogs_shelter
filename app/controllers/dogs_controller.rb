@@ -9,12 +9,13 @@ class DogsController < ApplicationController
     def new
         @dog = Dog.new
         # @dog.build_shelter
+        render layout: "admin"
     end
 
     def create
         @dog = Dog.new(dog_params)
         if @dog.save
-            redirect_to dogs_path
+            redirect_to admin_dogs_path
         else
             render :new
         end

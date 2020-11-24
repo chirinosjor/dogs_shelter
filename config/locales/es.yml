@@ -1,5 +1,14 @@
 ---
 es:
+  activerecord:
+    errors:
+      models:
+        dog:
+          attributes:
+            age:
+              less_than_or_equal_to: La edad del perro no puede ser tan alta
+            shelter:
+              required: Debes elegir un refugio correcto
   body: Mensaje
   email: Email
   errors:

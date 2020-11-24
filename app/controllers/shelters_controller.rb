@@ -12,14 +12,15 @@ class SheltersController < ApplicationController
 
     def new
         @shelter = Shelter.new
+        render layout: "admin"
     end
 
     def create
         @shelter = Shelter.new(shelter_params)
         if @shelter.save
-            redirect_to shelters_path
+            redirect_to admin_shelters_path
         else
-            render :new
+            redirect_to new_shelter_path
         end
     end
 

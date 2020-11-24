@@ -2,6 +2,7 @@ class AdminController < ApplicationController
   before_action :authenticate_staff!
   
   def index
+    @staffs = Staff.all  
     render layout: "admin"
   end
 

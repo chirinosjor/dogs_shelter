@@ -1,6 +1,6 @@
 class Dog < ApplicationRecord
-    enum dog_size: {small: 0, medium: 1, large: 1}
-    enum gender: {male: 0, female: 1}
+    enum dog_size: {Pequeño: 0, Mediano: 1, Grande: 1}
+    enum gender: {Macho: 0, Hembra: 1}
 
     has_one_attached :picture
     has_many_attached :uploads

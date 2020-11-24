@@ -1,0 +1,103 @@
+/* ==========================================================================
+  GLOBALES
+========================================================================== */
+
+span {
+  color: #3ca0e7;
+  font-weight: bold;
+  font-family: arvo;
+}
+
+.contenedor {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.seccion {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: arvo;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: arvo;
+  color: black;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: arvo;
+}
+
+p {
+  color: black;
+}
+
+body > section:nth-child(4) > div:nth-child(2) > form {
+  text-align: center;
+}
+.encabezado {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.encabezado::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url("separator.png");
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.centrar {
+  text-align: center;
+}
+
+span {
+  color: white
+}
+/* ==========================================================================
+  GENERAL
+========================================================================== */
+
+
+.welcome {
+  margin-bottom: 50px;
+}
+
+.copyright span {
+  color: black;
+}
+
+.logout {
+ width: 100%;
+}
+
+/* ==========================================================================
+  DOGS
+========================================================================== */
+
+th {
+  color: black;
+}
+
+td {
+  color: black;
+}
