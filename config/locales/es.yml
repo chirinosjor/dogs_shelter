@@ -1,5 +1,6 @@
 ---
 es:
+  body: Mensaje
   email: Email
   errors:
     messages:
@@ -11,6 +12,7 @@ es:
   medium: Mediano
   message: Mensaje
   name: Nombre
+  phone_number: Número de teléfono
   session:
     email: Correo electrónico
     forgot_password: Olvidé mi contraseña

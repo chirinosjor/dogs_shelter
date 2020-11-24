@@ -1,5 +1,6 @@
 ---
 en:
+  body: Body
   email: Email
   errors:
     messages:
@@ -11,6 +12,7 @@ en:
   medium: Medium
   message: Message
   name: Name
+  phone_number: Phone number
   session:
     email: Email
     forgot_password: Forgot password
