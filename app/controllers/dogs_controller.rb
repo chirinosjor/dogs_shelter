@@ -2,6 +2,8 @@ class DogsController < ApplicationController
     before_action :find_dog, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_staff!, only: [:edit, :update, :destroy]
 
+    layout 'admin', only: [:new, :create]
+
     def index
         @dogs = Dog.all    
     end
@@ -9,7 +11,6 @@ class DogsController < ApplicationController
     def new
         @dog = Dog.new
         # @dog.build_shelter
-        render layout: "admin"
     end
 
     def create
@@ -17,7 +18,7 @@ class DogsController < ApplicationController
         if @dog.save
             redirect_to admin_dogs_path
         else
-            render :new, layout: "admin"
+            render :new
         end
     end
 
