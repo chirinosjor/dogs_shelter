@@ -14,6 +14,7 @@ module Refuge
     # Use Vips for processing variants.
     config.active_storage.variant_processor = :vips
     config.i18n.default_locale = :es
+    config.assets.precompile += ['admin_panel']
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
