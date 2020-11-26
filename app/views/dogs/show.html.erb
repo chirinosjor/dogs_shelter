@@ -5,8 +5,7 @@
 <section class="dog-details contenedor">
   <div class="dog-image">
     <%= image_tag(@dog.picture, size: '500x500')%>
-
-    <strong>Más fotos:</strong> <br/>
+    <h3>Más fotos:</h3> <br/>
     <div class="uploads">
       <% if @dog.uploads.attached? %>
         <% @dog.uploads.each do |upload| %>
