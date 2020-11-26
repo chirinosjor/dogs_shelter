@@ -20,7 +20,7 @@ class SheltersController < ApplicationController
         if @shelter.save
             redirect_to admin_shelters_path
         else
-            redirect_to new_shelter_path
+            render :new, layout: "admin"
         end
     end
 

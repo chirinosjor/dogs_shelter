@@ -17,7 +17,7 @@ class DogsController < ApplicationController
         if @dog.save
             redirect_to admin_dogs_path
         else
-            render :new
+            render :new, layout: "admin"
         end
     end
 

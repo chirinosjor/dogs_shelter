@@ -1,14 +1,51 @@
 ---
 es:
   activerecord:
+    attributes:
+      dog:
+        age: Edad
+        name: Nombre
+        gender: Sexo
+        description: Historia
+        shelter_id: Refugio
+        picture: Imagen
+      shelter:
+        name: Nombre
+        address: Dirección
+        description: Descripción
+        capacity: Capacidad
     errors:
       models:
+        shelter:
+          attributes:
+            name:
+              blank: no puede ser un campo vacio
+            address:
+              blank: no puede ser un campo vacio
+            description:
+              blank: no puede ser un campo vacio
+            capacity:
+              blank: no puede ser un campo vacio
+              not_a_number: debe ser un numero
         dog:
           attributes:
+            name:
+              blank: no puede ser un campo vacio
+              invalid: debe ser un campo valido
             age:
-              less_than_or_equal_to: La edad del perro no puede ser tan alta
+              less_than_or_equal_to: no puede ser tan alta
+              blank: no puede ser un campo vacio
+              not_a_number: debe ser un numero
             shelter:
-              required: Debes elegir un refugio correcto
+              required: es un campo requerido
+            gender:
+              blank: no puede ser un campo vacio
+            description:
+              blank: no puede ser un campo vacio
+            shelter_id:
+              blank: no puede ser un campo vacio
+            picture:
+              blank: no puede ser un campo vacio
   body: Mensaje
   email: Email
   errors:

@@ -2,5 +2,6 @@
 
 
 <%= form_for @shelter do |f|%>
+    <%= form_errors_for @shelter %>
     <%= render partial: 'form', locals: { f: f }  %>
 <% end %>

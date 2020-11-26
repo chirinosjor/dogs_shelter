@@ -1,9 +1,3 @@
-<% if @dog.errors.any? %>
-  <% @dog.errors.full_messages.each do |message|%>\
-  <h3><%= message %> </h3>
-  <%end%>
-<%end%>
-
 <div class="mt-5">
     <%= f.label "Nombre:"%>
     <%= f.text_field :name%>
@@ -28,7 +22,7 @@
 </div>
 <div>
     <%= f.label "Refugio:" %>
-    <%= f.select :shelter_id, Shelter.all.collect {|s| [ s.name] },
+    <%= f.select :shelter_id, Shelter.all.collect {|s| [ s.id] },
     { :include_blank => "Selecciona un refugio" } 
     %>
 </div>
@@ -37,8 +31,8 @@
     <%= f.file_field :picture %>
 </div>
 <div>
-  <%= f.label "Otras fotos del perro" %>
-  <%= f.file_field :uploads, multiple: true %>
+<%= f.label "Otras fotos del perro" %>
+<%= f.file_field :uploads, multiple: true %>
 </div>
 <div class ="mt-5">
     <%= f.submit class: 'btn btn-primary' %>
