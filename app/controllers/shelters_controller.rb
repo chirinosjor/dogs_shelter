@@ -3,7 +3,7 @@ class SheltersController < ApplicationController
     before_action :authenticate_staff!
 
     # Layout for admin panel    
-    layout 'admin', only: [:new, :create]
+    layout 'admin'
 
 
     def index
@@ -31,7 +31,7 @@ class SheltersController < ApplicationController
 
     def update
         @shelter.update(shelter_params)
-        redirect_to shelters_path
+        redirect_to admin_shelters_path
     end
 
     def destroy

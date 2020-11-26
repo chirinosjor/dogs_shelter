@@ -4,9 +4,11 @@
 
 <div>
     <h2>Detalles del refugio</h2>
-    <h3>Dirección:</h3> <%= @shelter.address %>
-    <h3>Descripción:</h3> <%= @shelter.description %>
-    <h3>Capacidad máxima:</h3> <%= @shelter.capacity %>
+    <h3>Identificador del refugio:</h3> <p><%= @shelter.id %></p>
+    <h3>Dirección:</h3> <p><%= @shelter.address %></p>
+    <h3>Descripción:</h3> <p><%= @shelter.description %></p>
+    <h3>Capacidad máxima:</h3> <p><%= @shelter.capacity %></p>
+    <h3>Capacidad disponible:</h3> <p><%= @shelter.capacity - @shelter.dogs.count %></p>
 </div>
 
 <h2>Perros dentro del refugio</h2>

@@ -24,7 +24,7 @@
                 <td><%= shelter.name %></td>
                 <td><%= shelter.address %></td>
                 <td><%= shelter.description %></td>
-                <td><%= shelter.capacity %></td>
+                <td><%= shelter.capacity - shelter.dogs.count %></td>
                 <td>
                     <%= link_to "Mostrar", shelter_path(shelter), :class => "btn btn-success" %>
                     <%= link_to "Editar", edit_shelter_path(shelter), :class => "btn btn-warning"  %>
